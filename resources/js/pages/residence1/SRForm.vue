@@ -1,8 +1,9 @@
 <template>
-    <div class="w-full flex justify-center mb-10">
+    <div class="w-full flex justify-center">
         <!-- Button to open modal -->
         <button @click="openModal"
-            class="bg-[#5c503f] text-white text-lg font-semibold py-3 px-6 rounded-lg hover:bg-opacity-80 transition">
+            class=" text-black text-lg font-semibold py-3 px-6 rounded-lg hover:bg-opacity-80 transition"
+            :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
             REQUEST COMPUTATIONS
         </button>
     </div>
@@ -100,6 +101,7 @@
 import { ref, computed } from 'vue';
 import { router } from '@inertiajs/vue3';
 import Swal from 'sweetalert2'; // Import SweetAlert2
+import goldbutton from '../../images/goldbutton34.jpg';
 
 const capitalizeFirstLetter = (text: string) => {
     return text.replace(/\b\w/g, char => char.toUpperCase());

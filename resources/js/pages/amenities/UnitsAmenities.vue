@@ -1,8 +1,7 @@
 <template>
-    <div
-        class="bg-[#8a7965] w-full py-12 px-4 flex flex-col items-center md:flex-row md:justify-center md:space-x-6 lg:space-x-12">
+    <div class="w-full py-12 px-4 flex flex-col items-center md:flex-row md:justify-center md:space-x-6 lg:space-x-12">
         <h2 ref="textContainer"
-            class="text-[#1c3459] text-center text-3xl sm:text-4xl md:text-5xl font-serif leading-tight opacity-0 translate-y-10 transition-all duration-700 ease-out"
+            class="text-white text-center text-3xl sm:text-4xl md:text-5xl font-serif leading-tight opacity-0 translate-y-10 transition-all duration-700 ease-out"
             :class="{ 'fade-in': isTextVisible }">
             Explore Our Unit
         </h2>
@@ -10,11 +9,13 @@
             class="flex flex-wrap justify-center gap-4 mt-4 md:mt-0 opacity-0 translate-y-10 transition-all duration-700 ease-out"
             :class="{ 'fade-in': isTextVisible }">
             <a href="/service-residence"
-                class="bg-[#2db24a] text-white text-center px-6 py-3 rounded-2xl text-base sm:text-lg shadow-md transition duration-300 hover:bg-[#24993e]">
+                :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+                class="text-black font-cormorant font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-md shadow-black transition duration-300 ">
                 Serviced Residences
             </a>
             <a href="/private-residence"
-                class="bg-[#2db24a] text-white text-center px-6 py-3 rounded-2xl text-base sm:text-lg shadow-md transition duration-300 hover:bg-[#24993e]">
+                :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+                class="text-black font-cormorant font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-md shadow-black transition duration-300">
                 Private Residences
             </a>
         </div>
@@ -23,6 +24,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import goldbutton from '../../images/goldbutton34.jpg';
 
 const isTextVisible = ref(false);
 const textContainer = ref<HTMLElement | null>(null);

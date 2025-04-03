@@ -4,12 +4,12 @@
       <!-- Hero Section -->
       <main class="relative bg-white">
         <transition name="fade-out" appear>
-          <div 
+          <div
             class="w-full h-[50vh] sm:h-[65vh] md:h-[75vh] lg:h-[90vh] xl:h-screen bg-cover bg-center relative"
             :style="{ backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
           >
             <div class="absolute inset-0 bg-black bg-opacity-20"></div>
-            
+
             <!-- Responsive Positioned Text with Scroll Animation -->
             <div ref="heroText"
               class="absolute top-1/4 md:top-[30%] right-4 sm:right-8 md:right-16 lg:right-32 text-white text-right font-cormorant px-4 sm:px-6 transition-all duration-700 ease-out"

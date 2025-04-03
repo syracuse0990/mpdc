@@ -5,10 +5,11 @@
             :style="{ backgroundImage: `url(${bgImage})` }"></div>
 
         <!-- Separate Black Overlay -->
-        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="absolute inset-0"></div>
 
         <!-- Form Container -->
-        <div class="relative bg-white w-full max-w-sm md:max-w-2xl lg:max-w-4xl rounded-2xl shadow-xl overflow-hidden z-20">
+        <div
+            class="relative bg-white w-full max-w-sm md:max-w-2xl lg:max-w-4xl rounded-2xl shadow-xl overflow-hidden z-20">
             <div class="bg-gray-900 px-6 md:px-10 py-6 md:py-12 text-center">
                 <h2 ref="textSection"
                     class="text-white text-xl md:text-3xl font-cormorant font-bold mb-4 md:mb-6 opacity-0 translate-y-10 transition-all duration-700 ease-out"
@@ -21,20 +22,24 @@
                     <!-- Left Section -->
                     <div class="space-y-4 md:space-y-6">
                         <div>
-    <label class="block text-gray-700 text-sm font-semibold mb-1" for="first_name">First Name</label>
-    <input id="first_name" v-model="form.first_name" type="text" placeholder="Juan"
-        class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
-        @input="form.first_name = capitalizeFirstLetter(form.first_name)" />
-    <div v-if="form.errors.first_name" class="text-red-400 mt-1 text-xs">{{ form.errors.first_name }}</div>
-</div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-1" for="first_name">First
+                                Name</label>
+                            <input id="first_name" v-model="form.first_name" type="text" placeholder="Juan"
+                                class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
+                                @input="form.first_name = capitalizeFirstLetter(form.first_name)" />
+                            <div v-if="form.errors.first_name" class="text-red-400 mt-1 text-xs">{{
+                                form.errors.first_name }}</div>
+                        </div>
 
-<div>
-    <label class="block text-gray-700 text-sm font-semibold mb-1" for="last_name">Last Name</label>
-    <input id="last_name" v-model="form.last_name" type="text" placeholder="Dela Cruz"
-        class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
-        @input="form.last_name = capitalizeFirstLetter(form.last_name)" />
-    <div v-if="form.errors.last_name" class="text-red-400 mt-1 text-xs">{{ form.errors.last_name }}</div>
-</div>
+                        <div>
+                            <label class="block text-gray-700 text-sm font-semibold mb-1" for="last_name">Last
+                                Name</label>
+                            <input id="last_name" v-model="form.last_name" type="text" placeholder="Dela Cruz"
+                                class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
+                                @input="form.last_name = capitalizeFirstLetter(form.last_name)" />
+                            <div v-if="form.errors.last_name" class="text-red-400 mt-1 text-xs">{{ form.errors.last_name
+                                }}</div>
+                        </div>
 
                         <div>
                             <label class="block text-gray-700 text-sm font-semibold mb-1" for="email">Email</label>
@@ -44,12 +49,13 @@
                             </div>
                         </div>
                         <div>
-                            <label class="block text-gray-700 text-sm font-semibold mb-1" for="contact">Contact Number</label>
-                            <input id="contact" v-model="form.contact_number" type="text"
-                                placeholder="+63"
+                            <label class="block text-gray-700 text-sm font-semibold mb-1" for="contact">Contact
+                                Number</label>
+                            <input id="contact" v-model="form.contact_number" type="text" placeholder="+63"
                                 class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
                                 maxlength="11" @input="formatContactNumber" />
-                            <div v-if="form.errors.contact_number" class="text-red-400 mt-1 text-xs">{{ form.errors.contact_number }}</div>
+                            <div v-if="form.errors.contact_number" class="text-red-400 mt-1 text-xs">{{
+                                form.errors.contact_number }}</div>
                         </div>
                     </div>
                     <!-- Right Section -->
@@ -69,7 +75,8 @@
                         </div>
                         <div class="pt-2">
                             <button type="submit" :disabled="form.processing"
-                                class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-semibold py-2 rounded-lg shadow-md transition-transform transform hover:scale-105">
+                                :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+                                class="text-xl w-full text-black font-cormorant font-semibold py-2 rounded-lg shadow-md shadow-black/50 transition-transform transform hover:scale-105">
                                 <span v-if="form.processing">Please wait to submit...</span>
                                 <span v-else>Book a Call!</span>
                             </button>
@@ -84,12 +91,13 @@
 
 
 <script setup lang="ts">
-import bgImage from '../../images/ame5.jpg';
+import bgImage from '../../images/goldbg_fpb.jpg';
 import { ref, onMounted, watch } from "vue";
 import { useForm } from "@inertiajs/vue3";
 import Swal from "sweetalert2";
 import Datepicker from "@vuepic/vue-datepicker";
 import "@vuepic/vue-datepicker/dist/main.css";
+import goldbutton from '../../images/goldbutton34.jpg';
 
 const form = useForm({
     first_name: '',
@@ -113,7 +121,7 @@ const capitalizeFirstLetter = (text: string) => {
 };
 
 
-const selectedDate = ref < Date | null > (null);
+const selectedDate = ref<Date | null>(null);
 const selectedTime = ref('');
 const today = new Date();
 
@@ -254,5 +262,4 @@ nav {
 ::v-deep(.dp__outer_menu_wrap) {
     z-index: 9999 !important;
 }
-
 </style>

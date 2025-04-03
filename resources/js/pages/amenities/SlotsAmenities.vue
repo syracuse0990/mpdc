@@ -1,54 +1,61 @@
 <template>
-    <!-- Responsive Amenities Section -->
-    <div class="px-3">
-        <div class="w-full h-auto bg-gray-300 mt-4 mb-4 p-6">
-            <div ref="textContainer"
-                class="relative w-full lg:w-1/2 flex flex-col order-2 lg:order-none opacity-0 translate-y-10 transition-all duration-700 ease-out"
-                :class="{ 'fade-in': isTextVisible }">
-                <h2
-                    class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-cormorant text-blue-900 px-4 sm:px-6 py-4">
-                    Amenities
-                </h2>
-            </div>
-            <!-- Grid Layout for Cards -->
-            <div ref="imageContainer"
-                class="grid grid-cols-1 sm:grid-cols-2 gap-6 opacity-0 translate-y-10 transition-all duration-700 ease-out"
-                :class="{ 'fade-in': isImageVisible }">
+    <div :style="{ backgroundImage: `url(${bgsilk})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
+        <!-- Responsive Amenities Section -->
+        <div class="px-3">
+            <div class="w-full h-auto p-6">
+                <div ref="textContainer"
+                    class="relative w-full lg:w-1/2 flex flex-col order-2 lg:order-none opacity-0 translate-y-10 transition-all duration-700 ease-out"
+                    :class="{ 'fade-in': isTextVisible }">
+                    <h2
+                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-cormorant text-white px-4 sm:px-6 py-4">
+                        Amenities
+                    </h2>
+                </div>
+                <!-- Grid Layout for Cards -->
+                <div ref="imageContainer"
+                    class="grid grid-cols-1 sm:grid-cols-2 gap-6 opacity-0 translate-y-10 transition-all duration-700 ease-out"
+                    :class="{ 'fade-in': isImageVisible }">
 
-                <a href="#" v-for="(amenity, index) in amenities" :key="index" @click.prevent="openPreview(amenity.image, amenity.title)">
-                    <div class="bg-[#8a7965] shadow-lg rounded-lg p-6 cursor-pointer">
-                        <img :src="amenity.image" :alt="amenity.title"
-                            class="w-full h-[285px] object-cover rounded-md">
-                        <p class="text-2xl font-semibold font-cormorant text-white mt-3">{{ amenity.title }}</p>
-                    </div>
-                </a>
+                    <a href="#" v-for="(amenity, index) in amenities" :key="index"
+                        @click.prevent="openPreview(amenity.image, amenity.title)">
+                        <div class="bg-[#8a7965] shadow-lg rounded-lg p-6 cursor-pointer">
+                            <img :src="amenity.image" :alt="amenity.title"
+                                class="w-full h-[285px] object-cover rounded-md">
+                            <p class="text-2xl font-semibold font-cormorant text-white mt-3">{{ amenity.title }}</p>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
+
+        <!-- Image Preview Modal -->
+        <div v-if="showPreview" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50"
+            @click.self="closePreview">
+            <div class="relative bg-white rounded-lg p-8 max-w-5xl w-11/12 shadow-lg">
+                <!-- Close Button -->
+                <button
+                    class="absolute top-1 right-2 text-gray-700 text-3xl font-bold hover:text-gray-900 transition-transform transform hover:scale-110"
+                    @click="closePreview">
+                    &times;
+                </button>
+
+
+                <!-- Image & Title -->
+                <img :src="previewImage" :alt="previewTitle"
+                    class="w-full h-auto max-h-[80vh] object-contain rounded-lg">
+                <p class="text-center text-2xl font-semibold text-gray-900 mt-6">{{ previewTitle }}</p>
+            </div>
+        </div>
+        <div>
+            <UnitsAmenities />
+        </div>
     </div>
-
-<!-- Image Preview Modal -->
-<div v-if="showPreview" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-80 z-50"
-    @click.self="closePreview">
-    <div class="relative bg-white rounded-lg p-8 max-w-5xl w-11/12 shadow-lg">
-<!-- Close Button -->
-<button 
-    class="absolute top-1 right-2 text-gray-700 text-3xl font-bold hover:text-gray-900 transition-transform transform hover:scale-110" 
-    @click="closePreview">
-    &times;
-</button>
-
-
-        <!-- Image & Title -->
-        <img :src="previewImage" :alt="previewTitle" class="w-full h-auto max-h-[80vh] object-contain rounded-lg">
-        <p class="text-center text-2xl font-semibold text-gray-900 mt-6">{{ previewTitle }}</p>
-    </div>
-</div>
-
-
 </template>
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import UnitsAmenities from './UnitsAmenities.vue';
+import bgsilk from '../../images/bg silk1.jpg';
 
 // Import images correctly from assets
 import amenities1 from '../../images/amenities1.jpg';
@@ -99,7 +106,7 @@ const handleKeydown = (event: KeyboardEvent) => {
 
 onMounted(() => {
     document.addEventListener('keydown', handleKeydown);
-    
+
     // Intersection Observer for smooth fade-in when scrolling
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {

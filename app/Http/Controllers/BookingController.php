@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\BookingMail;
 use App\Models\Booking;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
