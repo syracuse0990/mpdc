@@ -1,23 +1,17 @@
 <template>
-    <div class="bg-white w-full h-fit">
-        <!-- Hero Section -->
-        <div class="flex flex-col items-center mt-6 px-4">
-            <div class="bg-[#0F0F17] w-full h-fit px-12 py-8 md:py-12">
-                <h2 ref="textSection"
-                    class="text-3xl md:text-5xl font-cormorant text-white opacity-0 translate-y-10 transition-all duration-700 ease-out"
-                    :class="{ 'fade-in': textVisible }">Be one of Our Partners</h2>
-            </div>
-        </div>
-
-        <!-- Content Section -->
-        <div class="bg-[#D9D9D9] w-full h-fit">
-            <div class="w-full md:w-screen h-fit flex items-center justify-center py-8 md:py-12 lg:py-16 px-4 md:px-8 bg-no-repeat bg-cover" :style="{ backgroundImage: `url(${heroImage})`}">
-                <div ref="imageSection"
-                    class="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12 opacity-0 translate-y-10 transition-all duration-700 ease-out"
-                    :class="{ 'fade-in': imageVisible }">
-                    <img src="../../images/selfie.png" alt="Selfie" class="max-w-full h-auto w-2/3 md:w-1/3">
-                    <div class="w-full max-w-3xl px-4">
-                        <p class="font-cormorant text-2xl md:text-2xl lg:text-4xl text-justify text-white">
+    <div class="w-full h-fit px-12 py-12"
+        :style="{ backgroundImage: `url(${fpbbg})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
+        <div class="w-full h-fit py-12 px-4">
+            <div class="flex items-center justify-center flex-col lg:flex-row gap-12">
+                <div class="w-full h-fit flex items-center justify-center">
+                    <img src="../../images/partnerspic1.jpg" alt="Selfie" class="max-w-full h-fit">
+                </div>
+                <div class="w-full h-fit">
+                    <div class="mb-8">
+                        <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-cormorant font-semibold">Be one of Our Partners</h2>
+                    </div>
+                    <div class="">
+                        <p class="font-cormorant text-1xl md:text-1xl lg:text-2xl text-justify text-white">
                             Join us in shaping the future of real estate by becoming an accredited partner of MPDC.
                             By getting accredited, you'll gain access to exclusive deals and a supportive network
                             designed
@@ -36,7 +30,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import heroImage from '../../images/pattern21.png';
+import fpbbg from '../../images/fpb_bg_blue.jpg';
 
 const textVisible = ref<boolean>(false);
 const imageVisible = ref<boolean>(false);

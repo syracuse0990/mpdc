@@ -94,8 +94,8 @@
         <!-- Submit Button -->
         <div class="text-center">
             <button type="submit" :disabled="!form.agree_terms || form.processing"
-                class="py-2 px-6 rounded-lg font-semibold transition duration-200" :class="{
-                    'bg-green-500 hover:bg-green-600 text-white': form.agree_terms && !form.processing,
+                class="py-2 px-6 rounded-lg font-semibold transition duration-200 text-white" :class="{
+                    'bg-green-500 hover:bg-green-600': form.agree_terms && !form.processing,
                     'bg-green-400 cursor-not-allowed': !form.agree_terms
                 }">
                 <span v-if="form.processing">Please wait to submit...</span>

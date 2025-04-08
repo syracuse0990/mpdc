@@ -9,12 +9,14 @@
         <div ref="textContainer"
             class="flex flex-wrap justify-center gap-4 mt-4 md:mt-0 opacity-0 translate-y-10 transition-all duration-700 ease-out"
             :class="{ 'fade-in': isTextVisible }">
-            <a href="/service-residence"
-                class="bg-[#2db24a] text-white text-center px-6 py-3 rounded-2xl text-base sm:text-lg shadow-md transition duration-300 hover:bg-[#24993e]">
+            <a href="/serviced-residence"
+                :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+            class="text-black font-cormorant font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
                 Serviced Residences
             </a>
             <a href="/private-residence"
-                class="bg-[#2db24a] text-white text-center px-6 py-3 rounded-2xl text-base sm:text-lg shadow-md transition duration-300 hover:bg-[#24993e]">
+            :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+            class="text-black font-cormorant font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
                 Private Residences
             </a>
         </div>
@@ -23,6 +25,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import goldbutton from '../../images/goldbutton34.jpg';
 
 const isTextVisible = ref(false);
 const textContainer = ref<HTMLElement | null>(null);

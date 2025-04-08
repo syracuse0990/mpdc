@@ -56,9 +56,9 @@ class InquiryController extends Controller
                     );
             });
 
-            return redirect()->to(url('/service-residence'))->with('message', 'Message sent successfully');
+            return redirect()->to(url('/serviced-residence'))->with('message', 'Message sent successfully');
         } catch (Exception $e) {
-            return redirect()->to(url('/service-residence'))->with('error', 'Something went wrong. Please try again later.');
+            return redirect()->to(url('/serviced-residence'))->with('error', 'Something went wrong. Please try again later.');
         }
     }
 

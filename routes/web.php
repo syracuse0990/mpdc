@@ -35,7 +35,7 @@ Route::get('/amenities', function () {
     return Inertia::render('amenities/Amenities'); // Or whatever the appropriate controller is
 })->name('Amenities');
 
-Route::get('/service-residence', function () {
+Route::get('/serviced-residence', function () {
     return Inertia::render('residence1/ServiceResidence'); // Or whatever the appropriate controller is
 })->name('ServiceResidence');
 
