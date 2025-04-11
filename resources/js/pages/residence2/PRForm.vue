@@ -2,7 +2,11 @@
     <div class="w-full flex justify-center">
         <!-- Button to open modal -->
         <button @click="openModal"
+<<<<<<< HEAD
+            class="text-black font-montserrat text-lg font-semibold py-3 px-6 rounded-lg hover:bg-opacity-80 transition"
+=======
             class="text-black  text-lg font-semibold py-3 px-6 rounded-lg hover:bg-opacity-80 transition"
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
             :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
             REQUEST COMPUTATIONS
         </button>
@@ -213,6 +217,11 @@ const saveInquiry = async () => {
 
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+}
 /* Smooth fade-in animation */
 .modal-enter-active,
 .modal-leave-active {

@@ -7,11 +7,19 @@
 
         <!-- Overlay Wrapping the Milestone Section -->
         <div
+<<<<<<< HEAD
+            class="absolute inset-0 flex flex-col justify-center items-center text-center px-2 py-8 md:py-12 bg-black bg-opacity-70">
+            <div class="w-full h-fit flex flex-col justify-center items-center text-center mt-16">
+                <!-- Milestone Title (Centered & Fades in) -->
+                <h2 ref="milestoneTitle"
+                    class="text-white text-3xl sm:text-5xl md:text-6xl font-bold font-montserrat drop-shadow-lg opacity-0 transition-all duration-700 ease-out"
+=======
             class="absolute inset-0 flex flex-col justify-center items-center text-center px-2 py-6 md:py-12 bg-black bg-opacity-70">
             <div class="w-full h-fit flex flex-col justify-center items-center text-center mt-12">
                 <!-- Milestone Title (Centered & Fades in) -->
                 <h2 ref="milestoneTitle"
                     class="text-white text-3xl sm:text-5xl md:text-6xl font-bold font-cormorant drop-shadow-lg opacity-0 transition-all duration-700 ease-out"
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                     :class="{ 'fade-in': titleVisible }">
                     Milestone
                 </h2>
@@ -23,9 +31,15 @@
                         <div v-for="(event, index) in milestones" :key="index"
                             class="relative flex flex-col items-center text-center opacity-0 translate-y-10 transition-all duration-700 ease-out"
                             :class="{ 'fade-in': event.visible }">
+<<<<<<< HEAD
+                            <p class="text-3xl md:text-4xl font-montserrat">{{ event.year }}</p>
+                            <div class="w-12 md:w-16 border-t border-white mt-2 mb-2 md:mb-4"></div>
+                            <p class="text-[15px] md:text-base" v-for="(desc, i) in event.descriptions" :key="i"
+=======
                             <p class="text-2xl md:text-5xl font-cormorant">{{ event.year }}</p>
                             <div class="w-12 md:w-16 border-t border-white mt-2 mb-2 md:mb-4"></div>
                             <p class="text-sm md:text-base" v-for="(desc, i) in event.descriptions" :key="i"
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                                 :class="{ 'mb-5': i === 0 }">
                                 {{ desc }}
                             </p>
@@ -91,12 +105,11 @@ onMounted(() => {
 
 <style scoped>
 /* Import Custom Font */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
-
 /* Initial State */
 .opacity-0 {
     opacity: 0;

@@ -8,7 +8,11 @@
                 <!-- <div class="absolute inset-0 bg-black/30"></div> -->
                 <div class="w-full h-fit py-12 flex items-center justify-center flex-col">
                     <div class="mt-24">
+<<<<<<< HEAD
+                        <h2 class="text-[#1C2852] text-5xl font-montserrat font-semibold">Contact Us</h2>
+=======
                         <h2 class="text-[#1C2852] text-5xl font-cormorant font-semibold">Contact Us</h2>
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                     </div>
                     <div class="w-full h-fit py-4 px-4 lg:px-12 mt-4 flex flex-col lg:flex-row justify-center gap-6">
                         <div class="w-full h-fit flex items-center justify-center">
@@ -280,10 +284,10 @@ const submitForm = () => {
 
 <style scoped>
 /* Import Custom Font */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Initial State */

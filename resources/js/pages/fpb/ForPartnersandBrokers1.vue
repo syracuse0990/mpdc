@@ -12,7 +12,7 @@
             class="relative bg-white w-full max-w-sm md:max-w-2xl lg:max-w-4xl rounded-2xl shadow-xl overflow-hidden z-20">
             <div class="bg-gray-900 px-6 md:px-10 py-6 md:py-12 text-center">
                 <h2 ref="textSection"
-                    class="text-white text-xl md:text-3xl font-cormorant font-bold mb-4 md:mb-6 opacity-0 translate-y-10 transition-all duration-700 ease-out"
+                    class="text-white text-xl md:text-2xl font-montserrat font-bold mb-4 md:mb-6 opacity-0 translate-y-10 transition-all duration-700 ease-out"
                     :class="{ 'fade-in': textVisible }">
                     For accreditation assistance, book a private call with us!
                 </h2>
@@ -76,7 +76,11 @@
                         <div class="pt-2">
                             <button type="submit" :disabled="form.processing"
                                 :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+<<<<<<< HEAD
+                                class="text-xl w-full text-black font-montserrat font-semibold py-2 rounded-lg shadow-md shadow-black/50 transition-transform transform hover:scale-105">
+=======
                                 class="text-xl w-full text-black font-cormorant font-semibold py-2 rounded-lg shadow-md shadow-black/50 transition-transform transform hover:scale-105">
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                                 <span v-if="form.processing">Please wait to submit...</span>
                                 <span v-else>Book a Call!</span>
                             </button>
@@ -238,10 +242,10 @@ onMounted(() => {
 
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
 .opacity-0 {

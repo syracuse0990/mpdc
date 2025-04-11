@@ -6,12 +6,20 @@
                 <div class="w-full h-fit py-4 lg:py-12 px-2">
                     <div class="px-12">
                         <h2
+<<<<<<< HEAD
+                            class="font-montserrat text-white text-[20px] md:text-3xl lg:text-[40px] text-center md:text-justify font-bold mb-4 sm:mb-6 md:mb-8">
+=======
                             class="text-white text-[20px] md:text-3xl lg:text-[40px] text-center md:text-justify font-bold mb-4 sm:mb-6 md:mb-8">
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                             Citadines Southwoods <br> Biñan at the Cerise Tower
                         </h2>
                     </div>
                     <div class="w-full h-fit px-4 mt-12 lg:mt-14">
+<<<<<<< HEAD
+                        <p class=" text-white text-sm sm:text-base md:text-lg lg:text-[24px] xl:text-[24px] text-justify">
+=======
                         <p class="text-white text-sm sm:text-base md:text-lg lg:text-[24px] xl:text-[24px] text-justify">
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                             The Cerise Tower is MPDC’s first project set to rise in Southwoods City, Biñan, Laguna.
                             Designed
                             for
@@ -23,14 +31,22 @@
                         </p>
                     </div>
                     <!-- Navigation Links -->
+<<<<<<< HEAD
+                    <div class="flex flex-col items-center gap-6 mt-16 font-montserrat font-semibold">
+=======
                     <div class="flex flex-col items-center gap-6 mt-16">
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                         <a class="text-[15px] xl:text-[18px] bg-cover bg-center border rounded-xl border-black w-60 text-center px-6 py-3 text-black hover:bg-white hover:text-black transition shadow-lg"
                             :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
                             href="/amenities">
                             Amenities
                         </a>
                         <div class="flex flex-wrap lg:row justify-center gap-6 px-4">
+<<<<<<< HEAD
+                            <a class="text-[15px] xl:text-[17px] border rounded-xl border-black w-60 text-center px-6 py-3 text-black hover:bg-white hover:text-black transition shadow-lg"
+=======
                             <a class="text-[15px] xl:text-[18px] border rounded-xl border-black w-60 text-center px-6 py-3 text-black hover:bg-white hover:text-black transition shadow-lg"
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                                 :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
                                 href="/serviced-residence">
                                 Serviced Residences
@@ -93,10 +109,10 @@ onMounted(() => {
 
 <style scoped>
 /* Import Custom Font */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Initial State */

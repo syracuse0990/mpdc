@@ -2,7 +2,7 @@
     <div
         class="bg-white w-full py-12 px-4 flex flex-col items-center md:flex-row md:justify-center md:space-x-6 lg:space-x-12">
         <h2 ref="textContainer"
-            class="text-[#1c3459] text-center text-3xl sm:text-4xl md:text-5xl font-serif leading-tight opacity-0 translate-y-10 transition-all duration-700 ease-out"
+            class="font-montserrat font-semibold text-[#1c3459] text-center text-3xl sm:text-4xl md:text-5xl font-serif leading-tight opacity-0 translate-y-10 transition-all duration-700 ease-out"
             :class="{ 'fade-in': isTextVisible }">
             Explore Our Unit
         </h2>
@@ -11,12 +11,20 @@
             :class="{ 'fade-in': isTextVisible }">
             <a href="/serviced-residence"
                 :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+<<<<<<< HEAD
+            class="text-black font-montserrat font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
+=======
             class="text-black font-cormorant font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                 Serviced Residences
             </a>
             <a href="/private-residence"
             :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
+<<<<<<< HEAD
+            class="text-black font-montserrat font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
+=======
             class="text-black font-cormorant font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                 Private Residences
             </a>
         </div>
@@ -51,10 +59,10 @@ onMounted(() => {
 
 <style scoped>
 /* Import Custom Font */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Scroll-based Fade-in */

@@ -2,7 +2,11 @@
     <div class="relative w-full h-fit py-12 px-6 md:px-16"
         :style="{ backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
         <!-- Title -->
+<<<<<<< HEAD
+        <h2 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold font-montserrat mb-6 text-left">
+=======
         <h2 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold font-cormorant mb-6 text-left">
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
             Our partners
         </h2>
         <!-- Partner Logos -->
@@ -17,7 +21,11 @@
         <!-- Two-Column Content (Tightly Packed) -->
         <div class="grid grid-cols-1 md:grid-cols-2 mt-6">
             <!-- Left: Text Section (No Gap) -->
+<<<<<<< HEAD
+            <div class="bg-[#1E3A5F] bg-opacity-40 text-white p-4 md:p-6 flex items-center">
+=======
             <div class="bg-[#1E3A5F] text-white p-4 md:p-6 flex items-center">
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                 <p class="text-xl md:text-xl leading-tight">
                     Malveda Properties and Development Corporation has established strategic partnership with leading
                     global hotel operators.
@@ -45,9 +53,14 @@ import heroImage from '../../images/bgwave.jpg';
 
 <style scoped>
 /* Import Custom Font */
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
+<<<<<<< HEAD
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+=======
 .font-cormorant {
     font-family: 'Cormorant Garamond', serif;
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
 }
 </style>

@@ -24,7 +24,11 @@
                     <div class="absolute inset-0 bg-black opacity-40"></div>
 
                     <!-- Text Content (Only for images) -->
+<<<<<<< HEAD
+                    <div v-if="slides[currentIndex].type === 'image'" ref="textContainer" class="absolute top-[50%] left-[10%] text-white font-montserrat px-4 sm:px-6 max-w-[80%] sm:max-w-[60%]
+=======
                     <div v-if="slides[currentIndex].type === 'image'" ref="textContainer" class="absolute top-[50%] left-[10%] text-white font-cormorant px-4 sm:px-6 max-w-[80%] sm:max-w-[60%]
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
               opacity-0 transform translate-y-10 transition-all duration-700 ease-out"
                         :class="{ 'fade-in': isTextVisible }">
                         <h3 class="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
@@ -71,6 +75,10 @@ import SR3D from '../../images/SR2d (3).jpg';
 import SR4D from '../../images/SR2d (4).jpg';
 import SR5D from '../../images/SR2d (5).jpg';
 
+<<<<<<< HEAD
+interface Slide {
+    type: 'image';
+=======
 // Replace with your actual video paths
 import studioVideo from '../../images/videos/The Cerise Tower - Studio Unit Serviced Residence Walkthrough.mp4';
 import oneBedVideo from '../../images/videos/SR 1BR walkthrough.mp4';
@@ -78,6 +86,7 @@ import twoBedVideo from '../../images/videos/2 BR walkthrough.mp4';
 
 interface Slide {
     type: 'image' | 'video';
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
     src: string;
     alt?: string;
     title?: string;
@@ -89,13 +98,19 @@ const slides = ref<Slide[]>([
     { type: 'image', src: SR1, alt: '', title: 'Studio Unit', description: 'Serviced Residences' },
     { type: 'image', src: SR2, alt: '', title: 'Studio Unit', description: 'Serviced Residences' },
     { type: 'image', src: SR3, alt: '', title: 'Studio Unit', description: 'Serviced Residences' },
+<<<<<<< HEAD
+=======
     { type: 'video', src: studioVideo },
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
 
     // 1-Bedroom
     { type: 'image', src: SR1B, alt: '', title: '1-Bedroom', description: 'Serviced Residences' },
     { type: 'image', src: SR2B, alt: '', title: '1-Bedroom', description: 'Serviced Residences' },
     { type: 'image', src: SR3B, alt: '', title: '1-Bedroom', description: 'Serviced Residences' },
+<<<<<<< HEAD
+=======
     { type: 'video', src: oneBedVideo },
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
 
     // 2-Bedroom
     { type: 'image', src: SR1D, alt: '', title: '2-Bedroom', description: 'Serviced Residences' },
@@ -103,7 +118,10 @@ const slides = ref<Slide[]>([
     { type: 'image', src: SR3D, alt: '', title: '2-Bedroom', description: 'Serviced Residences' },
     { type: 'image', src: SR4D, alt: '', title: '2-Bedroom', description: 'Serviced Residences' },
     { type: 'image', src: SR5D, alt: '', title: '2-Bedroom', description: 'Serviced Residences' },
+<<<<<<< HEAD
+=======
     { type: 'video', src: twoBedVideo },
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
 ]);
 
 const currentIndex = ref<number>(0);
@@ -162,10 +180,17 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+<<<<<<< HEAD
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+.font-montserrat {
+  font-family: 'Montserrat', sans-serif;
+=======
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
 
 .font-cormorant {
     font-family: 'Cormorant Garamond', serif;
+>>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
 }
 
 .fade-enter-active,
