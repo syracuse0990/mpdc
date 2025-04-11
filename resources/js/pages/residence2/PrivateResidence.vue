@@ -10,16 +10,10 @@
                     <div class="absolute inset-0 bg-blue-900/70"></div>
 
                     <!-- Center the heading both vertically and horizontally, with a slight upward shift on smaller screens -->
-<<<<<<< HEAD
                     <div class="absolute inset-0 flex items-center justify-center text-center font-montserrat w-full px-4 md:px-8"
                         style="top: -20%;">
                         <h2
                             class="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
-=======
-                    <div class="absolute inset-0 flex items-center justify-center text-center font-cormorant w-full px-4 md:px-8"
-                        style="top: -20%;">
-                        <h2 class="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                             Private <br>
                             Residences
                         </h2>
@@ -30,11 +24,7 @@
                         <div
                             class="absolute bottom-4 md:bottom-20 left-1/2 transform -translate-x-1/2 flex flex-wrap justify-center gap-4 w-full px-4 min-[648px]:flex-row flex-col items-center">
                             <button v-for="unit in unitOptions" :key="unit.name" @click="selectedButton = unit.name"
-<<<<<<< HEAD
                                 class="font-montserrat font-semibold text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl
-=======
-                                class="font-cormorant font-semibold text-xs sm:text-sm md:text-base lg:text-xl xl:text-2xl
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                        px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 py-2 sm:py-3 md:py-4 lg:py-5 xl:py-6
                        rounded-full shadow-xl transition-all duration-300
                        w-[90%] sm:w-[80%] md:w-auto max-w-[250px] sm:max-w-[280px] md:max-w-[300px] lg:max-w-[350px] xl:max-w-[400px]"
@@ -65,10 +55,6 @@
                 <PrivateResidence3 v-if="selectedButton === 'PR 2 Bedroom Unit'" />
             </div>
 
-<<<<<<< HEAD
-=======
-            <SRimage />
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
             <slideimages />
 
             <!-- <div class="bg-gray-900">
@@ -110,13 +96,8 @@ onMounted(() => {
 /* Import Custom Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-<<<<<<< HEAD
 .font-montserrat {
     font-family: 'Montserrat', sans-serif;
-=======
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
 }
 
 /* Smooth Fade & Slide-Up Effect */

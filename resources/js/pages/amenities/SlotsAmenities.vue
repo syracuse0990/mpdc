@@ -7,11 +7,7 @@
                     class="relative w-full lg:w-1/2 flex flex-col order-2 lg:order-none opacity-0 translate-y-10 transition-all duration-700 ease-out"
                     :class="{ 'fade-in': isTextVisible }">
                     <h2
-<<<<<<< HEAD
                         class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-montserrat text-white px-4 sm:px-6 py-4 mb-4">
-=======
-                        class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold font-cormorant text-white px-4 sm:px-6 py-4">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                         Amenities
                     </h2>
                 </div>
@@ -25,11 +21,7 @@
                         <div class="bg-[#8a7965] shadow-lg rounded-lg p-6 cursor-pointer">
                             <img :src="amenity.image" :alt="amenity.title"
                                 class="w-full h-[285px] object-cover rounded-md">
-<<<<<<< HEAD
                             <p class="text-2xl font-semibold font-montserrat text-white mt-3">{{ amenity.title }}</p>
-=======
-                            <p class="text-2xl font-semibold font-cormorant text-white mt-3">{{ amenity.title }}</p>
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                         </div>
                     </a>
                 </div>

@@ -8,17 +8,10 @@
                 </div>
                 <div class="w-full h-fit">
                     <div class="mb-8">
-<<<<<<< HEAD
                         <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-montserrat font-semibold">Be one of Our Partners</h2>
                     </div>
                     <div class="">
                         <p class="font-montserrat text-1xl md:text-1xl lg:text-2xl text-justify text-white">
-=======
-                        <h2 class="text-white text-3xl md:text-4xl lg:text-5xl font-cormorant font-semibold">Be one of Our Partners</h2>
-                    </div>
-                    <div class="">
-                        <p class="font-cormorant text-1xl md:text-1xl lg:text-2xl text-justify text-white">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                             Join us in shaping the future of real estate by becoming an accredited partner of MPDC.
                             By getting accredited, you'll gain access to exclusive deals and a supportive network
                             designed

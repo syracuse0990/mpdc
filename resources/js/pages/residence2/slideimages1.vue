@@ -18,11 +18,7 @@
                     <div class="absolute inset-0 bg-black opacity-40"></div>
 
                     <!-- Transition for News Content (Fade-in + Slide-up) -->
-<<<<<<< HEAD
                     <div ref="textContainer" class="absolute top-[50%] left-[10%] text-white font-montserrat px-4 sm:px-6 max-w-[80%] sm:max-w-[60%]
-=======
-                    <div ref="textContainer" class="absolute top-[50%] left-[10%] text-white font-cormorant px-4 sm:px-6 max-w-[80%] sm:max-w-[60%]
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                      opacity-0 transform translate-y-10 transition-all duration-700 ease-out"
                         :class="{ 'fade-in': isTextVisible }">
                         <h3 class="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight">
@@ -293,17 +289,10 @@ onUnmounted(() => {
 
 <style scoped>
 /* Import Custom Font */
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
-=======
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap');
-
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
 }
 
 /* Smooth Fade-in Effect */

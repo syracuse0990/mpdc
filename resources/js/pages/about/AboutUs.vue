@@ -12,11 +12,7 @@
                     <div ref="heroText"
                         class="relative z-10 w-full max-w-4xl opacity-0 translate-y-10 transition-all duration-1000 ease-out pt-24 lg:pt-0">
                         <h2
-<<<<<<< HEAD
                             class="text-white font-montserrat text-center md:text-left text-2xl sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] font-bold leading-tight">
-=======
-                            class="text-white font-cormorant text-center md:text-left text-3xl sm:text-[4rem] md:text-[4.5rem] lg:text-[5rem] xl:text-[5.5rem] font-bold leading-tight">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                             Purposeful
                             Living <br>
                             Redefined
@@ -26,11 +22,7 @@
                     <!-- Text Box with Scroll Effect -->
                     <div ref="heroTextBox"
                         class="relative z-10 mt-6 md:mt-0 flex justify-center md:justify-end w-full opacity-0 translate-y-10 transition-all duration-1000 ease-out">
-<<<<<<< HEAD
                         <div class="bg-black bg-opacity-60 text-white font-montserrat p-6 sm:p-8 md:p-10 rounded-lg
-=======
-                        <div class="bg-black bg-opacity-60 text-white font-cormorant p-6 sm:p-8 md:p-10 rounded-lg
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                                     w-full md:max-w-lg lg:max-w-xl xl:max-w-2xl shadow-lg">
                             <p class="text-base sm:text-lg md:text-xl leading-relaxed tracking-wide">
                                 Malveda Properties and Development Corporation, a subsidiary and the real estate

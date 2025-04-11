@@ -7,11 +7,7 @@
                 </div>
 
                 <div ref="textContainer"
-<<<<<<< HEAD
                     class="absolute bottom-[150px] md:bottom-[280px] left-4 sm:left-8 md:left-16 lg:left-32 text-white text-left font-montserrat px-4 sm:px-6 opacity-0 translate-y-10 transition-all duration-700 ease-out"
-=======
-                    class="absolute bottom-[150px] md:bottom-[280px] left-4 sm:left-8 md:left-16 lg:left-32 text-white text-left font-cormorant px-4 sm:px-6 opacity-0 translate-y-10 transition-all duration-700 ease-out"
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                     :class="{ 'fade-in': isTextVisible }">
                     <h2
                         class="text-3xl sm:text-[3rem] md:text-[3.5rem] lg:text-[4rem] xl:text-[4.5rem] font-bold leading-tight">

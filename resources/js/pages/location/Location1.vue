@@ -9,22 +9,14 @@
                 <!-- Floating Header with Transition -->
                 <transition name="slide-up" appear>
                     <h2
-<<<<<<< HEAD
                         class="font-montserrat text-white ml-16 py-5 text-3xl lg:text-5xl font-bold rounded-tl-lg inline-block w-auto">
-=======
-                        class=" text-white ml-16 py-5 text-3xl lg:text-5xl font-bold rounded-tl-lg inline-block w-auto">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                         Location Map
                     </h2>
                 </transition>
 
                 <!-- Description Section -->
                 <div class="p-10 rounded-l-lg">
-<<<<<<< HEAD
                     <div class="text-white font-montserrat">
-=======
-                    <div class="text-white font-cormorant">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                         <!-- Text Slides Up with Delay -->
                         <transition name="slide-up-delayed" appear>
                             <p class="text-xl leading-relaxed text-justify">
@@ -86,14 +78,9 @@ import locationbg from '../../images/location_bg.png';
     transform: translateY(30px);
 }
 
-<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
-=======
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
 }
 </style>

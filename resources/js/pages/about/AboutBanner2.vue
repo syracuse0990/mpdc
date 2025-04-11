@@ -7,15 +7,9 @@
         <br>
         <!-- Left Section: Heading & Paragraph with Scroll Animation -->
         <div ref="textSection"
-<<<<<<< HEAD
             class="md:w-1/2 text-gray-700 text-2xl font-montserrat leading-relaxed px-8 md:px-12 lg:px-6 py-24 text-center md:text-left opacity-0 translate-y-10 transition-all duration-700 ease-out"
             :class="{ 'fade-in': textVisible }">
             <p class="text-justify mt-24 sm:mt-4 md:mt-0">
-=======
-            class="md:w-1/2 text-gray-700 text-2xl font-cormorant leading-relaxed px-8 md:px-12 lg:px-6 py-24 text-center md:text-left opacity-0 translate-y-10 transition-all duration-700 ease-out"
-            :class="{ 'fade-in': textVisible }">
-            <p class="text-justify mt-12 sm:mt-4 md:mt-0">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                 LEADS Agricultural Products Corporation, the lead subsidiary of MHC, capitalized on skills in distributing useful
                 and cost-effective farming solutions to grow the business beyond expectations. This opened new doors for expansion
                 into other industries where plans to establish a head office turned into an opportunity to go into real estate.

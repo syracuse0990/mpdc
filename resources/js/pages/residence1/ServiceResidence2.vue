@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
     <div class="w-full h-fit py-12 px-0 sm:px-4 md:px-4"
         :style="{ backgroundImage: `url(${fpbbg})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
         <div class="flex flex-col min-[935px]:flex-row items-center justify-center min-h-screen px-0 lg:px-6 py-8">
@@ -8,16 +7,6 @@
             <div class="flex flex-col items-center md:items-start pl-0 md:pl-8 lg:pl-12">
                 <transition name="slide-up-text" appear>
                     <h2 class="font-montserrat text-4xl sm:text-5xl font-serif mb-12 text-center md:text-left text-white">
-=======
-    <div class="w-full h-fit px-4 md:px-12"
-        :style="{ backgroundImage: `url(${fpbbg})`, backgroundSize: 'cover', backgroundPosition: 'center' }">
-        <div class="flex flex-col md:flex-row items-center justify-center min-h-screen px-0 lg:px-6 py-8">
-
-            <!-- Left Section: Heading & Image -->
-            <div class="flex flex-col items-center md:items-start">
-                <transition name="slide-up-text" appear>
-                    <h2 class="text-4xl sm:text-5xl font-serif mb-12 text-center md:text-left text-white">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                         1-Bedroom
                     </h2>
                 </transition>
@@ -33,13 +22,8 @@
 
             <!-- Information Section with Slide-Up Transition -->
             <transition name="slide-up-text" appear>
-<<<<<<< HEAD
                 <div class="w-full text-white px-6 md:px-8 lg:px-12 py-10 text-center md:text-right">
                     <table class="border-4 border-[#967524] w-full text-left font-montserrat mb-6 text-sm sm:text-base">
-=======
-                <div class="w-full md:w-2/3 text-white md:pl-10 py-10 text-center md:text-right">
-                    <table class="border-4 border-[#967524] w-full text-left font-cormorant mb-6 text-sm sm:text-base">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                         <tbody>
                             <tr class="border border-[#967524]">
                                 <td class="p-2 sm:p-3 border border-[#967524] w-1/3 text-2xl">Size Range</td>
@@ -53,11 +37,7 @@
                     </table>
                     <div class="overflow-x-auto">
                         <table
-<<<<<<< HEAD
                             class="border-4 border-[#967524] w-full text-left font-montserrat mb-6 text-xs sm:text-sm md:text-base">
-=======
-                            class="border-4 border-[#967524] w-full text-left font-cormorant mb-6 text-xs sm:text-sm md:text-base">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                             <thead>
                                 <tr class="border border-[#967524] text-white">
                                     <th colspan="4" class="pl-2 text-xl md:text-2xl lg:text-3xl p-3">Unit Deliverables
@@ -71,41 +51,25 @@
                                 </tr>
                             </thead>
                             <tbody class="text-center">
-<<<<<<< HEAD
                                 <tr class="border border-[#967524] text-[12px] sm:text-base md:text-lg">
-=======
-                                <tr class="border border-[#967524] text-sm sm:text-base md:text-lg">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                                     <td class="p-2 sm:p-3 border border-[#967524] font-semibold">Living / Dining</td>
                                     <td class="p-2 border border-[#967524]">Laminated Flooring</td>
                                     <td class="p-2 border border-[#967524]">Painted</td>
                                     <td class="p-2 border border-[#967524]">Painted</td>
                                 </tr>
-<<<<<<< HEAD
                                 <tr class="border border-[#967524] text-[12px] sm:text-base md:text-lg">
-=======
-                                <tr class="border border-[#967524] text-sm sm:text-base md:text-lg">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                                     <td class="p-2 sm:p-3 border border-[#967524] font-semibold">Kitchen</td>
                                     <td class="p-2 border border-[#967524]">Homogeneous Tile</td>
                                     <td class="p-2 border border-[#967524]">Quartz <br>(Natural Stone)</td>
                                     <td class="p-2 border border-[#967524]">Painted</td>
                                 </tr>
-<<<<<<< HEAD
                                 <tr class="border border-[#967524] text-[12px] sm:text-base md:text-lg">
-=======
-                                <tr class="border border-[#967524] text-sm sm:text-base md:text-lg">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                                     <td class="p-2 sm:p-3 border border-[#967524] font-semibold">Bedrooms</td>
                                     <td class="p-2 border border-[#967524]">Laminated Flooring</td>
                                     <td class="p-2 border border-[#967524]">Painted</td>
                                     <td class="p-2 border border-[#967524]">Painted</td>
                                 </tr>
-<<<<<<< HEAD
                                 <tr class="border border-[#967524] text-[12px] sm:text-base md:text-lg">
-=======
-                                <tr class="border border-[#967524] text-sm sm:text-base md:text-lg">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                                     <td class="p-2 sm:p-3 border border-[#967524] font-semibold">Toilet & Bath</td>
                                     <td class="p-2 border border-[#967524]">Homogeneous Tile</td>
                                     <td class="p-2 border border-[#967524]">Homogeneous Tile<br>Subway Tile</td>

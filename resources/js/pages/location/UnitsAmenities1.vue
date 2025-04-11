@@ -11,20 +11,12 @@
             :class="{ 'fade-in': isTextVisible }">
             <a href="/serviced-residence"
                 :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
-<<<<<<< HEAD
             class="text-black font-montserrat font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
-=======
-            class="text-black font-cormorant font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                 Serviced Residences
             </a>
             <a href="/private-residence"
             :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
-<<<<<<< HEAD
             class="text-black font-montserrat font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
-=======
-            class="text-black font-cormorant font-semibold text-center px-12 py-3 rounded-2xl text-base sm:text-lg lg:text-xl shadow-lg shadow-black/50 transition duration-300">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                 Private Residences
             </a>
         </div>
