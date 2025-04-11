@@ -19,21 +19,13 @@
                     class="bg-gray-300 p-8 md:p-12 w-full flex flex-col justify-between md:min-h-[450px] lg:min-h-[592px] relative z-10 rounded-r-lg">
 
                     <!-- Title -->
-<<<<<<< HEAD
                     <h4 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold font-montserrat text-blue-900">
-=======
-                    <h4 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold font-cormorant text-blue-900">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                         Location
                     </h4>
 
                     <!-- Text Content -->
                     <div class="flex-grow">
-<<<<<<< HEAD
                         <p class="text-black text-lg md:text-xl mt-10 leading-relaxed font-montserrat">
-=======
-                        <p class="text-black text-lg md:text-xl mt-10 leading-relaxed font-cormorant">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                             Nestled in a master planned estate in close proximity to techno-industrial parks, Citadines
                             Southwoods
                             Binan is made suitable for
@@ -92,13 +84,8 @@ onMounted(() => {
 /* Import Custom Font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-<<<<<<< HEAD
 .font-montserrat {
   font-family: 'Montserrat', sans-serif;
-=======
-.font-cormorant {
-    font-family: 'Cormorant Garamond', serif;
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
 }
 
 /* Scroll-based Fade-in */
