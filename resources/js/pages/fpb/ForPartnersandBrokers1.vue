@@ -63,7 +63,7 @@
                         <div class="relative">
                             <label class="block text-gray-700 text-sm font-semibold mb-1">Pick a Date</label>
                             <Datepicker v-model="selectedDate" :min-date="today" placeholder="Select a date"
-                                :enable-time-picker="false" :auto-apply="true" teleport="body"
+                                :enable-time-picker="false" :auto-apply="true" :teleport="'body'"
                                 class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition" />
                             <div v-if="form.errors.date" class="text-red-400 mt-1 text-xs">{{ form.errors.date }}</div>
                         </div>
@@ -76,11 +76,7 @@
                         <div class="pt-2">
                             <button type="submit" :disabled="form.processing"
                                 :style="{ backgroundImage: `url(${goldbutton})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
-<<<<<<< HEAD
                                 class="text-xl w-full text-black font-montserrat font-semibold py-2 rounded-lg shadow-md shadow-black/50 transition-transform transform hover:scale-105">
-=======
-                                class="text-xl w-full text-black font-cormorant font-semibold py-2 rounded-lg shadow-md shadow-black/50 transition-transform transform hover:scale-105">
->>>>>>> 45bc8954c5b95a95d1ab5a78f624a5d74aa6fd4a
                                 <span v-if="form.processing">Please wait to submit...</span>
                                 <span v-else>Book a Call!</span>
                             </button>
