@@ -11,13 +11,16 @@
     <!-- Modal Overlay -->
     <div v-if="isModalOpen" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <!-- Modal Box -->
-        <div class="bg-white w-[90%] md:w-[600px] p-6 rounded-lg shadow-lg relative" @click.stop>
+<div
+    class="bg-white w-[95%] sm:w-[90%] md:w-[500px] p-4 sm:p-6 rounded-lg shadow-lg relative max-h-[90vh] overflow-y-auto"
+    @click.stop>
+
             <!-- Close Button -->
             <button
-                class="absolute top-2 right-2 text-gray-700 text-3xl w-12 h-12 flex items-center justify-center rounded-full hover:text-black hover:bg-gray-200 transition"
-                @click="closeModal">
-                &times;
-            </button>
+    class="absolute top-4 right-2 text-gray-700 text-4xl w-12 h-12 flex items-center justify-center rounded-full hover:text-black hover:bg-gray-200 transition"
+    @click="closeModal">
+    &times;
+</button>
 
             <!-- Modal Title -->
             <h2 class="text-2xl font-semibold text-center mb-4">Request for an Computations</h2>
@@ -30,6 +33,7 @@
                         <input v-model="form.first_name" type="text"
                             class="w-full border border-gray-300 rounded-lg p-2 text-gray-900 bg-white"
                             @input="form.first_name = capitalizeFirstLetter(form.first_name)" placeholder="Juan"
+                            @keypress="preventNumbers"
                             required>
                     </div>
                     <div>
@@ -37,6 +41,7 @@
                         <input v-model="form.last_name" type="text"
                             class="w-full border border-gray-300 rounded-lg p-2 text-gray-900 bg-white"
                             @input="form.last_name = capitalizeFirstLetter(form.last_name)" placeholder="Dela Cruz"
+                            @keypress="preventNumbers"
                             required>
                     </div>
                 </div>
@@ -122,16 +127,17 @@ const form = ref({
     processing: false
 });
 
-// Function to open the modal
 const openModal = () => {
     isModalOpen.value = true;
+    window.dispatchEvent(new Event('modal-opened'));
 };
 
-// Function to close the modal and clear form fields
 const closeModal = () => {
     isModalOpen.value = false;
+    window.dispatchEvent(new Event('modal-closed'));
     resetForm();
 };
+
 
 // Function to reset the form
 const resetForm = () => {
@@ -208,6 +214,12 @@ const saveInquiry = async () => {
             });
         }
     });
+};
+const preventNumbers = (event: KeyboardEvent) => {
+    const char = String.fromCharCode(event.keyCode || event.which);
+    if (/\d/.test(char)) {
+        event.preventDefault();
+    }
 };
 </script>
 

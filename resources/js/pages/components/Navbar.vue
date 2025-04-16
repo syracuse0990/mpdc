@@ -57,19 +57,41 @@
                 </ul>
             </nav>
 
-            <!-- Mobile Menu Button -->
-            <button class="block lg:hidden focus:outline-none text-3xl p-2" @click="toggleMenu">
-                ☰
-            </button>
+         <!-- Mobile Menu Button -->
+<button
+    class="relative w-6 h-6 flex flex-col justify-center items-center lg:hidden focus:outline-none z-50"
+    @click="toggleMenu"
+    aria-label="Toggle Menu"
+>
+    <span
+        :class="[
+            'absolute h-0.5 w-6 bg-white transition-transform duration-300',
+            isMenuOpen ? 'rotate-45' : '-translate-y-2'
+        ]"
+    ></span>
+    <span
+        :class="[
+            'absolute h-0.5 w-6 bg-white transition-opacity duration-300',
+            isMenuOpen ? 'opacity-0' : 'opacity-100'
+        ]"
+    ></span>
+    <span
+        :class="[
+            'absolute h-0.5 w-6 bg-white transition-transform duration-300',
+            isMenuOpen ? '-rotate-45' : 'translate-y-2'
+        ]"
+    ></span>
+</button>
+
         </div>
 
         <!-- Overlay (blocks clicks when menu is open) -->
-        <div v-if="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-50 z-40" @click="closeMenu"></div>
+        <div v-if="isMenuOpen" class="fixed inset-0 bg-black bg-opacity-50 z-50" @click="closeMenu"></div>
 
         <!-- Mobile Dropdown -->
         <transition name="slide">
             <nav v-if="isMenuOpen"
-                class="absolute top-full left-0 w-full bg-gradient-to-r from-[#1f2455] to-[#060e29] sm:backdrop-blur-sm text-white p-6 lg:hidden blur-fallback z-50">
+                class="fixed top-[68px] left-0 right-0 max-h-[80vh] overflow-y-auto w-full bg-gradient-to-r from-[#1f2455] to-[#0f132c] sm:backdrop-blur-sm text-white p-6 lg:hidden z-50">
                 <ul class="flex flex-col text-center antialiased text-lg space-y-4">
                     <li><a href="/about" class="block px-4 py-2 transition-all duration-300" @click="closeMenu">About
                             us</a></li>
@@ -176,7 +198,7 @@ onUnmounted(() => {
 .blur-fallback::before {
     content: "";
     position: absolute;
-    inset: 0;
+    inset: 20;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);

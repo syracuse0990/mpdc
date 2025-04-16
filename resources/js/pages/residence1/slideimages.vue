@@ -6,19 +6,17 @@
             <div class="relative w-full overflow-hidden">
                 <div class="relative group">
 
-                    <!-- Image or Video Display -->
-                    <transition name="fade" mode="out-in">
-                        <template v-if="slides[currentIndex].type === 'image'">
-                            <img :key="currentIndex" :src="slides[currentIndex].src" :alt="slides[currentIndex].alt"
-                                class="w-full h-[24vh] sm:h-[30vh] md:h-[50vh] lg:h-[80vh]
-                  object-contain sm:object-cover transition-transform duration-500 transform group-hover:scale-105" />
-                        </template>
-                        <template v-else>
-                            <video :key="currentIndex" :src="slides[currentIndex].src"
-                                class="w-full h-[24vh] sm:h-[30vh] md:h-[50vh] lg:h-[80vh] object-cover" autoplay muted
-                                playsinline @ended="nextImage"></video>
-                        </template>
-                    </transition>
+                   <!-- Responsive Wrapper with Aspect Ratio -->
+<div class="relative aspect-[16/9] sm:aspect-[16/9] md:aspect-[21/9] lg:aspect-[21/9] w-full overflow-hidden">
+    <!-- Image or Video Display -->
+    <transition name="fade" mode="out-in">
+        <template v-if="slides[currentIndex].type === 'image'">
+            <img :key="currentIndex" :src="slides[currentIndex].src" :alt="slides[currentIndex].alt"
+                class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 transform group-hover:scale-105" />
+        </template>
+    </transition>
+</div>
+
 
                     <!-- Overlay -->
                     <div class="absolute inset-0 bg-black opacity-40"></div>

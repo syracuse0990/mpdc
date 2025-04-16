@@ -7,12 +7,17 @@
             <div class="relative w-full overflow-hidden">
                 <div class="relative group">
 
-                    <!-- Transition for Image -->
-                    <transition name="fade" mode="out-in">
-                        <img :key="currentIndex" :src="images[currentIndex].src" :alt="images[currentIndex].alt"
-                            class="w-full h-[24vh] sm:h-[50vh] md:h-[60vh] lg:h-[80vh]
-                         object-contain sm:object-cover transition-transform duration-500 transform group-hover:scale-105" />
-                    </transition>
+                                <!-- Responsive Wrapper with Aspect Ratio -->
+<div class="relative aspect-[16/9] sm:aspect-[16/9] md:aspect-[21/9] lg:aspect-[21/9] w-full overflow-hidden">
+    <!-- Image or Video Display -->
+    <transition name="fade" mode="out-in">
+        <template v-if="images[currentIndex]">
+    <img :key="currentIndex" :src="images[currentIndex].src" :alt="images[currentIndex].alt"
+        class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 transform group-hover:scale-105" />
+</template>
+
+    </transition>
+</div>
 
                     <!-- Overlay -->
                     <div class="absolute inset-0 bg-black opacity-40"></div>
@@ -321,5 +326,14 @@ onUnmounted(() => {
 .fade-down {
     opacity: 1;
     transform: translateY(0);
+}
+/* Ensuring Images are Contained within Their Parent */
+img {
+    object-position: center center;
+}
+/* Ensure overlay takes full height and width */
+div.absolute.inset-0.bg-black.opacity-40 {
+    height: 100%;
+    width: 100%;
 }
 </style>

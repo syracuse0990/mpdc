@@ -26,7 +26,9 @@
                                 Name</label>
                             <input id="first_name" v-model="form.first_name" type="text" placeholder="Juan"
                                 class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
-                                @input="form.first_name = capitalizeFirstLetter(form.first_name)" />
+                                @input="form.first_name = capitalizeFirstLetter(form.first_name)"
+                                @keypress="preventNumbers"
+                                required />
                             <div v-if="form.errors.first_name" class="text-red-400 mt-1 text-xs">{{
                                 form.errors.first_name }}</div>
                         </div>
@@ -36,7 +38,9 @@
                                 Name</label>
                             <input id="last_name" v-model="form.last_name" type="text" placeholder="Dela Cruz"
                                 class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
-                                @input="form.last_name = capitalizeFirstLetter(form.last_name)" />
+                                @input="form.last_name = capitalizeFirstLetter(form.last_name)"
+                                @keypress="preventNumbers"
+                                required  />
                             <div v-if="form.errors.last_name" class="text-red-400 mt-1 text-xs">{{ form.errors.last_name
                                 }}</div>
                         </div>
@@ -44,7 +48,8 @@
                         <div>
                             <label class="block text-gray-700 text-sm font-semibold mb-1" for="email">Email</label>
                             <input id="email" v-model="form.email" type="email" placeholder="example@gmail.com"
-                                class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition" />
+                                class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
+                                required  />
                             <div v-if="form.errors.email" class="text-red-400 mt-1 text-xs">{{ form.errors.email }}
                             </div>
                         </div>
@@ -53,7 +58,8 @@
                                 Number</label>
                             <input id="contact" v-model="form.contact_number" type="text" placeholder="+63"
                                 class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
-                                maxlength="11" @input="formatContactNumber" />
+                                maxlength="11" @input="formatContactNumber"
+                                required />
                             <div v-if="form.errors.contact_number" class="text-red-400 mt-1 text-xs">{{
                                 form.errors.contact_number }}</div>
                         </div>
@@ -63,14 +69,16 @@
                         <div class="relative">
                             <label class="block text-gray-700 text-sm font-semibold mb-1">Pick a Date</label>
                             <Datepicker v-model="selectedDate" :min-date="today" placeholder="Select a date"
-                                :enable-time-picker="false" :auto-apply="true" :teleport="'body'"
-                                class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition" />
+                                :enable-time-picker="false" :auto-apply="true" teleport="body"
+                                class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
+                                required />
                             <div v-if="form.errors.date" class="text-red-400 mt-1 text-xs">{{ form.errors.date }}</div>
                         </div>
                         <div>
                             <label class="block text-gray-700 text-sm font-semibold mb-1">Pick a Time</label>
                             <input type="time" v-model="selectedTime"
-                                class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition" />
+                                class="w-full border border-gray-300 rounded-lg p-2 bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-400 shadow-md transition"
+                                required />
                             <div v-if="form.errors.time" class="text-red-400 mt-1 text-xs">{{ form.errors.time }}</div>
                         </div>
                         <div class="pt-2">
@@ -234,6 +242,12 @@ onMounted(() => {
     if (textSection.value) observer.observe(textSection.value);
     if (imageSection.value) observer.observe(imageSection.value);
 });
+const preventNumbers = (event: KeyboardEvent) => {
+    const char = String.fromCharCode(event.keyCode || event.which);
+    if (/\d/.test(char)) {
+        event.preventDefault();
+    }
+};
 </script>
 
 

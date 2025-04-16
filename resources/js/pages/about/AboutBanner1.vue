@@ -4,10 +4,11 @@
         <div class="absolute inset-0">
             <img src="../../images/ame7.jpg" alt="Milestone Background" class="w-full h-full object-cover">
         </div>
-
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black opacity-70"></div>
         <!-- Overlay Wrapping the Milestone Section -->
         <div
-            class="absolute inset-0 flex flex-col justify-center items-center text-center px-2 py-8 md:py-12 bg-black bg-opacity-70">
+            class="flex flex-col justify-center items-center text-center px-2 py-8 md:py-12">
             <div class="w-full h-fit flex flex-col justify-center items-center text-center mt-16">
                 <!-- Milestone Title (Centered & Fades in) -->
                 <h2 ref="milestoneTitle"
@@ -94,8 +95,9 @@ onMounted(() => {
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 .font-montserrat {
-  font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
+
 /* Initial State */
 .opacity-0 {
     opacity: 0;

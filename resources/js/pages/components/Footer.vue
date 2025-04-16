@@ -1,25 +1,22 @@
 <template>
     <footer class="bg-[#1a2a56] text-white pt-9 pb-12 relative">
-        <div class="max-w-screen-lg mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="max-w-screen-lg mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-20 text-center">
 
-            <!-- Section 1: Company Logos -->
-            <div class="flex flex-col items-center">
-                <!-- Large Centered Logo -->
-                <div>
-                    <img src="../../images/logos1.png" alt="Main Logo"
-                        class="w-40 sm:w-52 h-auto object-contain transition-transform duration-300 hover:scale-105 hover:brightness-110">
-                </div>
+       <!-- Section 1: Company Logos -->
+<div class="flex flex-col items-center mt-[-20px]">
+    <!-- 2x2 Grid for Responsive Logos -->
+    <div class="grid grid-cols-2 gap-6 max-w-[350px] mx-auto">
+        <img src="../../images/logos2.png" alt="Logo 2"
+            class="w-28 sm:w-32 h-28 sm:h-32 object-contain transition duration-300 hover:scale-105 hover:brightness-110">
+        <img src="../../images/logos3.png" alt="Logo 3"
+            class="w-28 sm:w-32 h-28 sm:h-32 object-contain transition duration-300 hover:scale-105 hover:brightness-110">
+        <img src="../../images/logos4.png" alt="Logo 4"
+            class="w-28 sm:w-32 h-28 sm:h-32 object-contain transition duration-300 hover:scale-105 hover:brightness-110">
+        <img src="../../images/logos1.png" alt="Logo 1"
+            class="w-28 sm:w-32 h-28 sm:h-32 object-contain transition duration-300 hover:scale-105 hover:brightness-110">
+    </div>
+</div>
 
-                <!-- Responsive Logos -->
-                <div class="flex xl:flex-row flex-col justify-center xl:space-x-6 space-y-6 xl:space-y-0">
-                    <img src="../../images/logos2.png" alt="Logo 2"
-                        class="w-28 sm:w-32 h-auto object-contain transition duration-300 hover:scale-105 hover:brightness-110">
-                    <img src="../../images/logos3.png" alt="Logo 3"
-                        class="w-28 sm:w-32 h-auto object-contain transition duration-300 hover:scale-105 hover:brightness-110">
-                    <img src="../../images/logos4.png" alt="Logo 4"
-                        class="w-28 sm:w-32 h-auto object-contain transition duration-300 hover:scale-105 hover:brightness-110">
-                </div>
-            </div>
 
             <!-- Section 2: Site Map -->
             <div class="flex flex-col items-center">
@@ -66,6 +63,7 @@
         </a>
     </footer>
 </template>
+
 
 <script setup lang="ts">
 import { onMounted } from 'vue';

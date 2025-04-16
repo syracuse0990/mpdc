@@ -8,7 +8,7 @@
                 <!-- <div class="absolute inset-0 bg-black/30"></div> -->
                 <div class="w-full h-fit py-12 flex items-center justify-center flex-col">
                     <div class="mt-24">
-                        <h2 class="text-[#1C2852] text-5xl font-montserrat font-semibold">Contact Us</h2>
+                        <h2 class="text-[#1C2852] text-4xl font-montserrat font-semibold">Contact Us</h2>
                     </div>
                     <div class="w-full h-fit py-4 px-4 lg:px-12 mt-4 flex flex-col lg:flex-row justify-center gap-6">
                         <div class="w-full h-fit flex items-center justify-center">
@@ -37,6 +37,7 @@
                                             class="w-full border border-black p-2 rounded focus:ring focus:ring-blue-300 text-black"
                                             placeholder="Juan"
                                             @input="form.first_name = capitalizeFirstLetter(form.first_name)"
+                                            @keypress="preventNumbers"
                                             required />
                                         <p v-if="errors.firstName" class="text-red-500 text-sm">{{ errors.firstName }}
                                         </p>
@@ -46,7 +47,9 @@
                                         <input v-model="form.last_name" type="text"
                                             class="w-full border border-black p-2 rounded focus:ring focus:ring-blue-300 text-black"
                                             placeholder="Dela Cruz"
-                                            @input="form.last_name = capitalizeFirstLetter(form.last_name)" required />
+                                            @input="form.last_name = capitalizeFirstLetter(form.last_name)"
+                                            @keypress="preventNumbers"
+                                            required />
                                         <p v-if="errors.lastName" class="text-red-500 text-sm">{{ errors.lastName }}</p>
                                     </div>
                                 </div>
@@ -274,6 +277,12 @@ const submitForm = () => {
             });
         }
     });
+};
+const preventNumbers = (event: KeyboardEvent) => {
+    const char = String.fromCharCode(event.keyCode || event.which);
+    if (/\d/.test(char)) {
+        event.preventDefault();
+    }
 };
 </script>
 
